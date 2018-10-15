@@ -8,6 +8,8 @@ hooks_target := $(etc_dir)/$(hooks_dir)
 dhcpd_cflags := -Wno-error=duplicate-decl-specifier -D_BSD_SOURCE
 # Clang complains about configure.c's comparing array with null.
 dhcpd_cflags += -Wno-tautological-pointer-compare
+dhcpd_cflags += -Wno-non-literal-null-conversion
+dhcpd_cflags += -Wno-unused-variable
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := arp.c bind.c common.c control.c dhcp.c dhcpcd.c duid.c \

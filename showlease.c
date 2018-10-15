@@ -32,7 +32,7 @@ struct dhcp_opt {
 	const char *var;
 };
 
-static const struct dhcp_opt const dhcp_opts[] = {
+static const struct dhcp_opt dhcp_opts[] = {
 	{ 1,	IPV4 | REQUEST,	"subnet_mask" },
 	{ 2,	UINT32,		"time_offset" },
 	{ 3,	IPV4 | ARRAY | REQUEST,	"routers" },
